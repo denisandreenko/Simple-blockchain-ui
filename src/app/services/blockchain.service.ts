@@ -12,8 +12,8 @@ export class BlockchainService {
 
   constructor() {
     this.blockchainInstance.difficulty = 1;
-    this.blockchainInstance.minePendingTransactions('my-wallet-address');
     this.generateWalletKeys();
+    this.blockchainInstance.minePendingTransactions(this.walletKeys[0].publicKey);
    }
 
    minePendingTransactions() {
